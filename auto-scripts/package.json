@@ -1,0 +1,11 @@
+{
+  "name": "qa-automation",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:login": "npx playwright test login.spec.ts"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "typescript": "^5.0.0"
+  }
+}

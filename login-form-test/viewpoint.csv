@@ -1,0 +1,11 @@
+tvp_id,viewpoint_name,description,linked_ac,priority
+TVP-001,UI Elements Presence,"Kiểm tra sự hiện diện đầy đủ của các thành phần UI: username field, password field, submit button, và labels tương ứng hiển thị trên trang",AC-1,high
+TVP-002,Happy Path Login,"Luồng login thành công với credentials hợp lệ (student/Password123) — form được điền đúng và submit, hệ thống chuyển hướng sang success page",AC-2,high
+TVP-003,Post-Login Redirect,"Sau khi login thành công, xác nhận URL hoặc page title thay đổi sang trang success (không phải reload lại trang login)",AC-2,high
+TVP-004,Wrong Username Login,"Login thất bại khi nhập username sai (bất kỳ giá trị nào khác student) với password đúng — error message xuất hiện trên trang",AC-3,high
+TVP-005,Wrong Password Login,"Login thất bại khi nhập username đúng (student) với password sai (bất kỳ giá trị nào khác Password123) — error message xuất hiện trên trang",AC-4,high
+TVP-006,Both Fields Empty,"Login thất bại khi bỏ trống cả username lẫn password rồi submit — hệ thống hiển thị validation hoặc error message",AC-5,high
+TVP-007,Username Only Empty,"Login thất bại khi bỏ trống username nhưng điền password — kiểm tra behavior và error message trong trường hợp này",AC-5,medium
+TVP-008,Password Only Empty,"Login thất bại khi điền username nhưng bỏ trống password — kiểm tra behavior và error message trong trường hợp này",AC-5,medium
+TVP-009,Error Message Content,"Xác nhận nội dung text của error message hiển thị đúng và có ý nghĩa với người dùng (không phải generic system error) cho các trường hợp AC-3, AC-4, AC-5",AC-3;AC-4;AC-5,medium
+TVP-010,Form Field Input Interaction,"Kiểm tra user có thể nhập liệu bình thường vào username field và password field (không bị block, không có ký tự bị từ chối bất ngờ)",AC-1;AC-2,medium
