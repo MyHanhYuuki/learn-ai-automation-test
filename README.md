@@ -22,6 +22,10 @@ requirement → [1] test-design → HITL#1 → [2] test-impl → HITL#2
 
 Xem `QC-Agent-Teams.html` để xem sơ đồ tương tác đầy đủ.
 
+## Dựng lại cho web khác (bản nâng cấp v2)
+
+📄 [`yeu-cau-build-he-thong-qa.md`](yeu-cau-build-he-thong-qa.md): điền URL `[Trang web bạn cần làm]`, đưa nguyên file cho AI agent là dựng được toàn bộ pipeline v2 (thêm qa-reviewer, evidence, bug report, RTM tự sinh), kèm 28 quy tắc rút từ lỗi đã gặp. Bản chạy thật: [playwright-ai-qa-portfolio](https://github.com/MyHanhYuuki/playwright-ai-qa-portfolio).
+
 ## Cách dùng
 
 ```bash
