@@ -44,3 +44,18 @@ Ví dụ TC-003 (đăng nhập thành công):
 ## Xem tận mắt
 - Mở `tests/specs/saucedemo-login-screen.spec.ts` để đọc code test.
 - Chạy `npm run test:ui`: từng test hiện ra kèm từng bước.
+
+## Đặt tên thư mục như vậy có đúng chuẩn không
+Đúng, đây là cách đặt tên phổ biến nhất hiện nay:
+
+| Thư mục | Có chuẩn không | Ghi chú |
+|---|---|---|
+| `tests/` | ✅ **Mặc định của Playwright**: lệnh `npm init playwright` tự tạo đúng tên này | Một số nơi đặt `e2e/` hoặc `tests/e2e/`, khi repo chứa cả code sản phẩm và unit test, để tách test giao diện ra riêng |
+| `tests/pages/` | ✅ Tên phổ biến cho Page Object | Có nơi đặt `page-objects/` hoặc `pom/`. Cùng một ý |
+| `tests/specs/` + đuôi `*.spec.ts` | ✅ Playwright tự nhận file `.spec.ts` / `.test.ts` | |
+| `tests/fixtures/`, `tests/data/`, `tests/utils/` | ✅ Hay gặp | Có nơi đặt `test-data/`, `helpers/`, `support/` (kiểu Cypress) |
+| `scripts/` | ✅ Quy ước chung của dự án Node: chứa script phụ trợ, chạy qua `npm run …` | Trong repo sản phẩm, `scripts/` hay dùng cho build hoặc deploy. Khi đó nên đặt tên rõ hơn, vd `scripts/qa/` hoặc `tools/` |
+
+**Ngoài thực tế:** không có chuẩn bắt buộc, quan trọng là **cả team thống nhất** và ghi vào README hoặc `CLAUDE.md`. Vào công ty mới, nếu repo đã có quy ước riêng thì theo quy ước của họ, đừng áp cấu trúc của mình vào.
+
+Repo portfolio là repo riêng cho test nên giữ tên `tests/`, `scripts/` là hợp lý.
