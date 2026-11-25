@@ -69,6 +69,7 @@ Mỗi quy tắc có nguồn gốc là một lỗi thật. **Không được bỏ
 | R15 | Mã và tên phải **đọc là hiểu**: `BUG-01` chứ không `KI-01`; thư mục theo màn hình | `KI-xx` (Known Issue) người đọc không hiểu |
 | R16 | Vấn đề phụ không chặn việc (CI chậm, giao diện đẹp hơn): ghi backlog, đi tiếp. Review nhiều điểm: sửa cái **chặn việc** và **sai sự thật**, còn lại backlog | Kẹt lâu ở tối ưu CI |
 | R17 | Trả lời ngắn, ít chia mục. Chi tiết để trong file | Trả lời dài, nhiều mục, khó đọc |
+| R29 | Không tái hiện được / không làm được một phát hiện của qa-reviewer: **không tự đóng**. Quay lại trao đổi với reviewer (gửi đúng cách đã thử), hai bên chốt (đúng / đúng một phần / sai, có bằng chứng), ghi mục "Trao đổi" trong file review, rồi báo người dùng 3 ý: không tái hiện được ở điểm nào; sau trao đổi chốt gì, sẽ làm gì; phương án tối ưu đề xuất | AI kết luận "không tái hiện được" lỗi console của `error_user` vì chỉ nghe sự kiện `console`; reviewer kiểm lại: lỗi có thật, là `pageerror` |
 
 ### 3.3 Code test
 | # | Quy tắc |
