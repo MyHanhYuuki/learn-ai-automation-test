@@ -22,11 +22,9 @@ requirement → [1] test-design → HITL#1 → [2] test-impl → HITL#2
 
 Xem `QC-Agent-Teams.html` để xem sơ đồ tương tác đầy đủ.
 
-## Dựng lại cho web khác (bản nâng cấp v2)
+## Phần bổ sung của MyHanhYuuki
 
-📄 [`yeu-cau-build-he-thong-qa.md`](yeu-cau-build-he-thong-qa.md): điền URL `[Trang web bạn cần làm]`, đưa nguyên file cho AI agent là dựng được toàn bộ pipeline v2 (thêm qa-reviewer, evidence, bug report, RTM tự sinh), kèm 28 quy tắc rút từ lỗi đã gặp. Bản chạy thật: [playwright-ai-qa-portfolio](https://github.com/MyHanhYuuki/playwright-ai-qa-portfolio).
-
-📂 [`cau-truc-code-playwright.md`](cau-truc-code-playwright.md): code test Playwright của bản chạy thật nằm ở đâu, cấu trúc ra sao, một test chạy thế nào.
+📂 [`MyHanhThem/`](MyHanhThem/README.md): yêu cầu cho AI agent dựng hệ thống QA, cấu trúc code Playwright, agent qa-reviewer bản dùng chung.
 
 ## Cách dùng
 

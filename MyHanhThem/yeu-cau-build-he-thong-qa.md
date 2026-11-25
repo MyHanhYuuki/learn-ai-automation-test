@@ -225,6 +225,8 @@ Mọi lệnh có `<feature>` truyền **đường dẫn spec + `-g`** cho Playwr
 | `healer` | Sửa script-issue, tối đa 2 vòng / TC | Sửa expected, `skip`/`fixme`, "sửa" test bug cho pass |
 | `qa-reviewer` | Soát sau mỗi bước theo checklist ISTQB của bước đó, kiểm chứng phát hiện mới trên web, ghi `review-<bước>.md` (mục A Phát hiện mới · B Thiếu sót · C Không nhất quán · D Sai kỹ thuật · E Quy trình, mỗi mục là bảng `# · Vấn đề · Bằng chứng · Mức 🔴/🟠/🟡 · Đề xuất`) | Sửa file của bước khác |
 
+Nội dung đầy đủ của `qa-reviewer` (nguyên tắc, kiến thức ISTQB, checklist từng bước): chép từ [`qa-reviewer.md`](qa-reviewer.md).
+
 `/qa-orchestrator <feature>`: gọi agent theo thứ tự mục 5, gọi `qa-reviewer` sau mỗi bước, dừng ở 3 HITL (lưu trạng thái vào `qa-runs/<feature>/.qa-state.json`, không commit), đếm vòng healer, cuối cùng in tóm tắt (số TC, Passed/Failed, số bug, % AC đạt) và đề xuất commit.
 
 ---
