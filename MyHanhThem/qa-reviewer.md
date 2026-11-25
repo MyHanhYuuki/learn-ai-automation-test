@@ -173,7 +173,7 @@ Rủi ro = **khả năng xảy ra × mức ảnh hưởng**.
 - [ ] Không có thông tin cá nhân hay đường dẫn máy
 
 ## 7. Mẫu báo cáo
-`<thư mục tính năng>/review-<bước>.md`:
+`<thư mục tính năng>/reviews/review-<bước>.md` (mọi file do qa-reviewer viết nằm chung thư mục `reviews/`):
 ```markdown
 # Review: <bước>, <feature>
 - Ngày · Reviewer: qa-reviewer · Kết luận: ✅ Đạt | ⚠️ Cần sửa | 🔴 Phải làm lại

@@ -118,7 +118,7 @@ CLAUDE.md              quy ước (mục 3, 6, 8) để mọi phiên AI sau đ�
 ---
 
 ## 5. Pipeline: các bước, đầu ra, điều kiện xong
-Sau **mỗi** bước gọi `qa-reviewer` (vai QC Lead, ISTQB, chỉ báo cáo, không sửa) → `review-<bước>.md`, sửa theo review, rồi mới tới HITL hoặc bước sau.
+Sau **mỗi** bước gọi `qa-reviewer` (vai QC Lead, ISTQB, chỉ báo cáo, không sửa) → `reviews/review-<bước>.md` (mọi file do qa-reviewer viết gom chung thư mục `reviews/`), sửa theo review, rồi mới tới HITL hoặc bước sau.
 
 ### Bước 0: Dựng dự án (một lần cho cả repo)
 Theo mục 2 hoặc 4. **Xong khi:** `npx playwright test` chạy seed pass, đổi `BASE_URL` sai thì seed fail (R3), CI xanh, `CLAUDE.md` có đủ quy ước.
@@ -176,7 +176,7 @@ npx playwright test tests/specs/<feature>.spec.ts --repeat-each=2   # độ ổn
 Tự sinh `rtm.md` (xem trên Git) + `rtm-report.html`. Không làm tay.
 
 ### Bước 7: review cuối (baseline)
-`qa-reviewer` soát **toàn bộ** chức năng + khả năng dùng làm mẫu → `review-final.md` (có dòng `> Tiến độ:` cập nhật sau mỗi phần). Sửa nhóm chặn việc + sai sự thật, còn lại backlog (R16). Chạy lại toàn bộ, RTM, quét bảo mật, commit.
+`qa-reviewer` soát **toàn bộ** chức năng + khả năng dùng làm mẫu → `reviews/review-final.md` (có dòng `> Tiến độ:` cập nhật sau mỗi phần). Sửa nhóm chặn việc + sai sự thật, còn lại backlog (R16). Chạy lại toàn bộ, RTM, quét bảo mật, commit.
 
 ---
 
@@ -223,7 +223,7 @@ Mọi lệnh có `<feature>` truyền **đường dẫn spec + `-g`** cho Playwr
 | `script-gen` | Bước 3. Có công cụ trình duyệt | Chạy test (việc của executor), import từ `@playwright/test` trong spec |
 | `executor` | Bước 4: `test:run`, triage, evidence | Sửa code, viết bug report |
 | `healer` | Sửa script-issue, tối đa 2 vòng / TC | Sửa expected, `skip`/`fixme`, "sửa" test bug cho pass |
-| `qa-reviewer` | Soát sau mỗi bước theo checklist ISTQB của bước đó, kiểm chứng phát hiện mới trên web, ghi `review-<bước>.md` (mục A Phát hiện mới · B Thiếu sót · C Không nhất quán · D Sai kỹ thuật · E Quy trình, mỗi mục là bảng `# · Vấn đề · Bằng chứng · Mức 🔴/🟠/🟡 · Đề xuất`) | Sửa file của bước khác |
+| `qa-reviewer` | Soát sau mỗi bước theo checklist ISTQB của bước đó, kiểm chứng phát hiện mới trên web, ghi `reviews/review-<bước>.md` (mục A Phát hiện mới · B Thiếu sót · C Không nhất quán · D Sai kỹ thuật · E Quy trình, mỗi mục là bảng `# · Vấn đề · Bằng chứng · Mức 🔴/🟠/🟡 · Đề xuất`) | Sửa file của bước khác |
 
 Nội dung đầy đủ của `qa-reviewer` (nguyên tắc, kiến thức ISTQB, checklist từng bước): chép từ [`qa-reviewer.md`](qa-reviewer.md).
 
