@@ -224,6 +224,7 @@ Mọi lệnh có `<feature>` truyền **đường dẫn spec + `-g`** cho Playwr
 | `script-gen` | Bước 3. Có công cụ trình duyệt | Chạy test (việc của executor), import từ `@playwright/test` trong spec |
 | `executor` | Bước 4: `test:run`, triage, evidence | Sửa code, viết bug report |
 | `healer` | Sửa script-issue, tối đa 2 vòng / TC | Sửa expected, `skip`/`fixme`, "sửa" test bug cho pass |
+| `bug-reporter` | Bước 5 (sau HITL #3): tái hiện độc lập từng bug trên trình duyệt sạch, thử biến thể, viết `defects.md` + ảnh `manual/` theo chuẩn ISTQB / ISO/IEC/IEEE 29119-3. Nội dung đầy đủ: [`bug-reporter.md`](bug-reporter.md) | Đổi severity đã duyệt, sửa code test |
 | `qa-reviewer` | Soát sau mỗi bước theo checklist ISTQB của bước đó, kiểm chứng phát hiện mới trên web, ghi `reviews/review-<bước>.md` (mục A Phát hiện mới · B Thiếu sót · C Không nhất quán · D Sai kỹ thuật · E Quy trình, mỗi mục là bảng `# · Vấn đề · Bằng chứng · Mức 🔴/🟠/🟡 · Đề xuất`) | Sửa file của bước khác |
 
 Nội dung đầy đủ của `qa-reviewer` (nguyên tắc, kiến thức ISTQB, checklist từng bước): chép từ [`qa-reviewer.md`](qa-reviewer.md).
